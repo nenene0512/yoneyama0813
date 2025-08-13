@@ -1,13 +1,15 @@
 const app = new Vue({
-  el: '#app', // Vueが管理する一番外側のDOM要素
+  el: '#app',
   vuetify: new Vuetify(),
   data: {
-    // Vue内部で使いたい変数は全てこの中に定義する
-    ID: '', //パラメーター「ID」格納変数
-    Name: '', //パラメーター「Name」格納変数
-    dataList: [], // データ表示用配列
-  },
-  methods: {
+    ID: '',
+    Name: '',
+    dataList: [],
+    snackbar: false,     
+    snackbarMessage: '',   
+    dialog: false,       
+    dialogMessage: '' 
+  },  methods: {
     // DBにデータを追加する関数
     addData: async function() {
 
